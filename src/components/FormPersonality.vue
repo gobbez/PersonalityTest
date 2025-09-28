@@ -164,24 +164,36 @@ export default {
       }
     },
     submitForm() {
-      for (let cat of this.categorie) {
-        if (this.risposte[cat.nome].some((r) => r === null)) {
-          alert('Rispondi a tutte le domande prima di inviare!')
-          return
+        for (let cat of this.categorie) {
+            if (this.risposte[cat.nome].some((r) => r === null)) {
+                alert('Rispondi a tutte le domande prima di inviare!')
+                return
+            }
         }
-      }
-      let risultati = {}
-      for (let cat of this.categorie) {
-        let score = 0
-        this.risposte[cat.nome].forEach((r) => {
-          if (r === 'si') score += 1
-          if (r === 'dipende') score += 0.5
-        })
-        risultati[cat.nome] = score
-      }
-      this.punteggi = risultati
-      this.submitted = true
-      this.showResults = true
+        let risultati = {
+            apertura: 0,
+            coscienziosita: 0,
+            estroversione: 0,
+            gradevolezza: 0,
+            nevroticismo: 0,
+        }
+
+        for (let cat of this.categorie) {
+            let score = 0
+            this.risposte[cat.nome].forEach((r) => {
+                if (r === 'si') score += 1
+                if (r === 'dipende') score += 0.5
+            })
+
+            if (cat.nome.includes("Apertura")) risultati.apertura = score
+            if (cat.nome.includes("Coscienziosità")) risultati.coscienziosita = score
+            if (cat.nome.includes("Estroversione")) risultati.estroversione = score
+            if (cat.nome.includes("Gradevolezza")) risultati.gradevolezza = score
+            if (cat.nome.includes("Nevroticismo")) risultati.nevroticismo = score
+        }
+        this.punteggi = risultati
+        this.submitted = true
+        this.showResults = true
     },
   },
 }

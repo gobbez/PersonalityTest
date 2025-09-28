@@ -162,10 +162,27 @@ body.dark-mode .risultati-box {
   color: #2e7d32;
   margin-bottom: 1rem;
 }
+.risultati-box h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
 body.dark-mode .risultati-box h2 {
   color: #81c784;
 }
 .risultati-box li {
   font-size: 1.05rem;
   margin: 0.4rem 0;
+}
+
+/* Results */
+.personalita {
+  border-bottom: 2px solid #81c784;
+}
+.personalita h3 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+.personalita p {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
 }
