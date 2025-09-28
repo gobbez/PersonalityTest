@@ -1,0 +1,171 @@
+.center {
+  text-align: center;
+}
+
+/* Reset minimale */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* LIGHT MODE - default */
+body {
+  background: linear-gradient(135deg, #e0f7fa, #f1f8e9, #fffde7);
+  background-size: 400% 400%;
+  animation: gradientShift 18s ease infinite;
+  color: #2e3a45;
+  line-height: 1.6;
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background: linear-gradient(135deg, #212121, #263238, #37474f);
+  color: #eceff1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Contenitore principale */
+.p-6 {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+body.dark-mode .p-6 {
+  background: rgba(38, 50, 56, 0.9);
+  color: #eceff1;
+}
+
+/* Titoli */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #37474f;
+}
+body.dark-mode h1 {
+  color: #eceff1;
+}
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #455a64;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #81c784;
+  padding-left: 0.5rem;
+}
+body.dark-mode h2 {
+  color: #cfd8dc;
+  border-left-color: #4db6ac;
+}
+
+/* Domande */
+p {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  color: #37474f;
+}
+body.dark-mode p {
+  color: #eceff1;
+}
+
+/* Input di testo */
+input[type='text'] {
+  border: 1px solid #b0bec5;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  transition:
+    border 0.3s,
+    box-shadow 0.3s;
+}
+input[type='text']:focus {
+  outline: none;
+  border-color: #4db6ac;
+  box-shadow: 0 0 6px rgba(77, 182, 172, 0.5);
+}
+body.dark-mode input[type='text'] {
+  background: #37474f;
+  border-color: #546e7a;
+  color: #eceff1;
+}
+
+/* Radio */
+input[type='radio'] {
+  accent-color: #4db6ac;
+  transform: scale(1.1);
+  margin-right: 0.25rem;
+}
+
+/* Pulsanti */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition:
+    transform 0.2s,
+    box-shadow 0.3s;
+}
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+.bg-blue-600 {
+  background-color: #4db6ac;
+  color: white;
+  padding: 0.5rem 1.2rem;
+}
+.bg-green-600 {
+  background-color: #81c784;
+  color: white;
+  padding: 0.6rem 1.4rem;
+}
+body.dark-mode .bg-blue-600 {
+  background-color: #26a69a;
+}
+body.dark-mode .bg-green-600 {
+  background-color: #66bb6a;
+}
+
+/* Box risultati */
+.risultati-box {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+  text-align: center;
+}
+body.dark-mode .risultati-box {
+  background: #37474f;
+  color: #eceff1;
+}
+.risultati-box h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+body.dark-mode .risultati-box h2 {
+  color: #81c784;
+}
+.risultati-box li {
+  font-size: 1.05rem;
+  margin: 0.4rem 0;
+}
