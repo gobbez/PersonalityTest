@@ -110,7 +110,8 @@ body.dark-mode input[type='text'] {
 input[type='radio'] {
   accent-color: #4db6ac;
   transform: scale(1.1);
-  margin-right: 0.25rem;
+  margin-right: 0rem;
+  margin-left: 2rem;
 }
 
 /* Pulsanti */
