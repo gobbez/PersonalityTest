@@ -1,16 +1,27 @@
-# Personality
+# Personality Test (Vue)
 
-This template should help get you started developing with Vue 3 in Vite.
+A small, bilingual (Italian/English) Personality Test built with Vue.
+Test your personality with a set of five questions for five traits (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism). Each question can be "yes", "maybe", "no".
 
-## Recommended IDE Setup
+Send your answers and receive the result of your personality, with a great image and description!
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Available in both italian and english!
 
-## Customize configuration
+## 🎯 Features
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Vue 3 single-file components (Vite-ready structure assumed)
 
-## Project Setup
+- Bilingual UI (Italian / English) via a simple lingua prop
+
+- Personality scoring across five traits (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism)
+
+- MBTI-like 4-letter type constructed from scores
+
+- Dark / Light toggle
+
+- Uses images from public/images for flag icons and personality images
+
+## 🚀 Project Setup
 
 ```sh
 npm install
@@ -27,3 +38,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## 🤝 Contributing
+
+Anyone is free to contribute and share their opinion!
