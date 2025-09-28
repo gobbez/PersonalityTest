@@ -73,7 +73,7 @@
     </div>
 
     <!-- Mostra i risultati -->
-    <Risultati v-if="showResults" :punteggi="punteggi" />
+    <Risultati v-if="showResults" :punteggi="punteggi" @restart="restartTest" />
   </div>
 </template>
 
@@ -155,6 +155,16 @@ export default {
     toggleDarkMode() {
       this.isDarkMode = !this.isDarkMode
       document.body.classList.toggle('dark-mode', this.isDarkMode)
+    },
+    restartTest() {
+        this.showResults = false
+        this.submitted = false
+        this.skipQuestions = false
+        this.knownPersonality = ''
+        this.punteggi = {}
+        this.categorie.forEach(cat => {
+            this.risposte[cat.nome] = Array(cat.domande.length).fill(null)
+        })
     },
     useKnownPersonality() {
       if (this.knownPersonality.trim() !== '') {
